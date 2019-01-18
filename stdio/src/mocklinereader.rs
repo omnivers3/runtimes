@@ -123,7 +123,7 @@ mod tests {
     use sink::fnsink::{ FnSink };
 
     #[test]
-    fn test_add() {
+    fn should_dispatch_already_initialized_when_initialize_called_twice() {
         let expected = vec![
             Ok (StdinEvents::Initialized),
             Err (StdinErrors::AlreadyInitialized),
